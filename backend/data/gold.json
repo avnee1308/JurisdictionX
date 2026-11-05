@@ -1,0 +1,16 @@
+[
+  { "text": "Heavy waterlogging outside Example Colony A, the drain is overflowing", "issues": ["drainage_overflow"], "primary": "DEP_DRAIN" },
+  { "text": "Water logging near colony b, the drain is blocked", "issues": ["drainage_overflow"], "primary": "DEP_ZONE" },
+  { "text": "Big potholes on the road in Example Colony A near the park", "issues": ["road_damage"], "primary": "DEP_ROADS" },
+  { "text": "The road has cracks and is damaged near Colony C", "issues": ["road_damage"], "primary": "DEP_ZONE" },
+  { "text": "Street light not working in Colony A, the lane is very dark", "issues": ["streetlight_failure"], "primary": "DEP_LIGHT" },
+  { "text": "The streetlight is not working in colony c", "issues": ["streetlight_failure"], "primary": null },
+  { "text": "Garbage pile near the drain in colony b and water is entering the road", "issues": ["drainage_overflow", "waste_accumulation"], "primary": "DEP_ZONE", "alsoTop3": ["DEP_SANIT"] },
+  { "text": "Continuous waterlogging outside Example Colony A. The drainage water is overflowing onto the road, and the road has also started deteriorating. I have complained several times.", "issues": ["drainage_overflow", "road_damage"], "primary": "DEP_DRAIN", "alsoTop3": ["DEP_ROADS"] },
+  { "text": "Garbage has been accumulating near the market in Colony A for a week", "issues": ["waste_accumulation"], "primary": "DEP_SANIT" },
+  { "text": "There is waste dumped on the road in example colony c", "issues": ["waste_accumulation"], "primary": "DEP_SANIT" },
+  { "text": "Waterlogging near my house, nothing is fixed", "issues": ["drainage_overflow"], "primary": null },
+  { "text": "My neighbour's dog barks all night", "issues": [], "primary": null },
+  { "text": "Water is flooding the lane, the road is broken, near colony b", "issues": ["drainage_overflow", "road_damage"], "primary": "DEP_ZONE", "alsoTop3": ["DEP_ROADS"] },
+  { "text": "Pothole near colony c and garbage everywhere", "issues": ["road_damage", "waste_accumulation"], "primary": "DEP_ZONE", "alsoTop3": ["DEP_SANIT"] }
+]

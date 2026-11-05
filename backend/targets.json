@@ -1,0 +1,6 @@
+[
+  {
+    "Id": "jx-escalation-target",
+    "Arn": "arn:aws:lambda:ap-southeast-2:037547369789:function:jx-escalation"
+  }
+]

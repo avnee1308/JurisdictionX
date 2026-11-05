@@ -1,0 +1,7 @@
+{
+    "Variables":  {
+                      "USE_BEDROCK":  "0",
+                      "ESCALATION_SECONDS":  "90",
+                      "STORE":  "dynamo"
+                  }
+}

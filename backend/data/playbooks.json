@@ -1,0 +1,23 @@
+{
+  "issues": {
+    "drainage_overflow": { "actions": [
+      { "key": "inspect_drain", "title": "Inspect drainage line and locate source of overflow", "assetType": "drainage_network", "dependsOn": [] },
+      { "key": "clear_drain", "title": "Clear blockage / repair drainage line", "assetType": "drainage_network", "dependsOn": ["inspect_drain"] }
+    ] },
+    "road_damage": { "actions": [
+      { "key": "inspect_road", "title": "Inspect road damage", "assetType": "road_segment", "dependsOn": [] },
+      { "key": "repair_road", "title": "Repair road surface", "assetType": "road_segment", "dependsOn": ["inspect_road"] }
+    ] },
+    "waste_accumulation": { "actions": [
+      { "key": "remove_waste", "title": "Remove accumulated waste", "assetType": "waste_point", "dependsOn": [] }
+    ] },
+    "streetlight_failure": { "actions": [
+      { "key": "inspect_light", "title": "Inspect failed streetlight", "assetType": "streetlight", "dependsOn": [] },
+      { "key": "repair_light", "title": "Repair or replace streetlight", "assetType": "streetlight", "dependsOn": ["inspect_light"] }
+    ] }
+  },
+  "crossDependencies": [
+    { "if": ["drainage_overflow", "road_damage"], "action": "inspect_road", "dependsOn": ["clear_drain"] },
+    { "if": ["drainage_overflow", "waste_accumulation"], "action": "inspect_drain", "dependsOn": ["remove_waste"] }
+  ]
+}

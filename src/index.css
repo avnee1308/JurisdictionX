@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-night text-bone font-sans antialiased min-h-screen;
+    background-image:
+      radial-gradient(900px 520px at 85% -10%, rgba(145, 70, 255, 0.24), transparent),
+      radial-gradient(800px 460px at -10% 110%, rgba(255, 117, 24, 0.2), transparent),
+      radial-gradient(500px 300px at 50% 50%, rgba(255, 117, 24, 0.04), transparent);
+    background-attachment: fixed;
+  }
+  ::selection { background: #FF7518; color: #0B0A12; }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { background: #5a3414; border-radius: 8px; }
+  :focus-visible { outline: 2px solid #FF7518; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+}
+
+@layer components {
+  .card { @apply bg-card/90 border border-pumpkin/10 rounded-2xl p-5 backdrop-blur; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-gradient-to-r from-pumpkin to-orange-400 text-night hover:brightness-110 shadow-glow; }
+  .btn-ghost { @apply btn border border-pumpkin/25 text-bone hover:border-pumpkin hover:text-pumpkin; }
+  .input { @apply w-full rounded-xl bg-night/80 border border-white/10 px-4 py-3 text-sm placeholder:text-bone/30 focus:outline-none focus:border-pumpkin/70 focus:ring-2 focus:ring-pumpkin/20; }
+  .badge { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium border; }
+  .h-display { @apply font-display font-bold tracking-tight; }
+  .muted { @apply text-bone/55; }
+  .bubble { @apply relative inline-block rounded-2xl bg-card border border-pumpkin/30 px-3 py-2 text-xs text-bone/90; }
+}
+
+.pumpkin-glow { filter: drop-shadow(0 0 14px rgba(255, 117, 24, 0.5)); }
+
+/* animated dependency edges in the graph */
+.flow { stroke-dasharray: 6 6; animation: dash 1s linear infinite; }
+@keyframes dash { to { stroke-dashoffset: -12; } }

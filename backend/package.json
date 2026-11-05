@@ -1,0 +1,12 @@
+{
+  "name": "jurisdictionx-backend",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "demo": "node scripts/demo.js",
+    "eval": "node scripts/gold-eval.js"
+  }
+}

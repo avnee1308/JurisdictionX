@@ -1,0 +1,38 @@
+{
+  "_note": "SYNTHETIC DEMO DATA. Departments, localities and ownership records are invented. Replace with verified records (source, date, verifiedOn) before any real use.",
+  "departments": [
+    { "id": "DEP_DRAIN", "name": "Drainage Authority (synthetic)" },
+    { "id": "DEP_ROADS", "name": "Road-Owning Authority (synthetic)" },
+    { "id": "DEP_LIGHT", "name": "Street Lighting Department (synthetic)" },
+    { "id": "DEP_SANIT", "name": "Sanitation Department (synthetic)" },
+    { "id": "DEP_ZONE", "name": "Municipal Zone Office (synthetic)" }
+  ],
+  "locations": [
+    { "id": "LOC_A", "name": "Example Colony A", "aliases": ["example colony a", "colony a"] },
+    { "id": "LOC_B", "name": "Example Colony B", "aliases": ["example colony b", "colony b"] },
+    { "id": "LOC_C", "name": "Example Colony C", "aliases": ["example colony c", "colony c"] }
+  ],
+  "sources": {
+    "S1": { "doc": "SYNTHETIC-RECORD-001", "date": "2026-01-01", "verifiedOn": "2026-10-01" }
+  },
+  "assets": [
+    { "id": "AST_A_DRAIN", "type": "drainage_network", "locationId": "LOC_A", "maintainedBy": "DEP_DRAIN", "source": "S1" },
+    { "id": "AST_A_ROAD",  "type": "road_segment",     "locationId": "LOC_A", "maintainedBy": "DEP_ROADS", "source": "S1" },
+    { "id": "AST_A_LIGHT", "type": "streetlight",      "locationId": "LOC_A", "maintainedBy": "DEP_LIGHT", "source": "S1" },
+    { "id": "AST_A_WASTE", "type": "waste_point",      "locationId": "LOC_A", "maintainedBy": "DEP_SANIT", "source": "S1" },
+    { "id": "AST_B_DRAIN", "type": "drainage_network", "locationId": "LOC_B", "maintainedBy": "DEP_ZONE", "source": "S1" },
+    { "id": "AST_B_ROAD",  "type": "road_segment",     "locationId": "LOC_B", "maintainedBy": "DEP_ROADS", "source": "S1" },
+    { "id": "AST_B_LIGHT", "type": "streetlight",      "locationId": "LOC_B", "maintainedBy": "DEP_LIGHT", "source": "S1" },
+    { "id": "AST_B_WASTE", "type": "waste_point",      "locationId": "LOC_B", "maintainedBy": "DEP_SANIT", "source": "S1" },
+    { "id": "AST_C_DRAIN", "type": "drainage_network", "locationId": "LOC_C", "maintainedBy": "DEP_DRAIN", "source": "S1" },
+    { "id": "AST_C_ROAD",  "type": "road_segment",     "locationId": "LOC_C", "maintainedBy": "DEP_ZONE", "source": "S1" },
+    { "id": "AST_C_WASTE", "type": "waste_point",      "locationId": "LOC_C", "maintainedBy": "DEP_SANIT", "source": "S1" }
+  ],
+  "coordinatesWith": [
+    ["DEP_DRAIN", "DEP_ROADS"],
+    ["DEP_DRAIN", "DEP_SANIT"],
+    ["DEP_ROADS", "DEP_LIGHT"],
+    ["DEP_ZONE", "DEP_ROADS"],
+    ["DEP_ZONE", "DEP_DRAIN"]
+  ]
+}
